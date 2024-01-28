@@ -37,7 +37,7 @@ public final class Constants {
         (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR;
 
     public static final double GEAR_RATIO = 8.45;
-    public static final double WHEEL_DIAMETER_METERS = 0.15;
+    public static final double WHEEL_DIAMETER_METERS = 0.1524;
     public static final double ENCODER_DISTANCE_PER_REV =
         // Assumes the encoders are directly mounted on the wheel shafts
         (WHEEL_DIAMETER_METERS * Math.PI) / GEAR_RATIO;
@@ -49,12 +49,12 @@ public final class Constants {
     // for *your* robot's drive.
     // The Robot Characterization Toolsuite provides a convenient tool for obtaining these
     // values for your robot.
-    public static final double ksVolts = 0.22;
-    public static final double kvVoltSecondsPerMeter = 1.98;
-    public static final double kaVoltSecondsSquaredPerMeter = 0.2;
+    public static final double ksVolts = 0.34918;
+    public static final double kvVoltSecondsPerMeter = 2.3363;
+    public static final double kaVoltSecondsSquaredPerMeter = 0.49557;
 
     // Example value only - as above, this must be tuned for your drive!
-    public static final double kPDriveVel = 8.5;
+    public static final double kPDriveVel = 0.3253;
   }
 
   public static final class OIConstants {
