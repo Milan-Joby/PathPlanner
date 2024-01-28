@@ -16,10 +16,10 @@ import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
  */
 public final class Constants {
   public static final class DriveConstants {
-    public static final int kLeftMotor1Port = 0;
-    public static final int kLeftMotor2Port = 1;
-    public static final int kRightMotor1Port = 2;
-    public static final int kRightMotor2Port = 3;
+    public static final int kLeftMotor1Port = 4;
+    //public static final int kLeftMotor2Port = 1;
+    public static final int kRightMotor1Port = 3;
+    //public static final int kRightMotor2Port = 3;
 
     public static final int[] kLeftEncoderPorts = new int[] {0, 1};
     public static final int[] kRightEncoderPorts = new int[] {2, 3};
@@ -35,6 +35,14 @@ public final class Constants {
     public static final double kEncoderDistancePerPulse =
         // Assumes the encoders are directly mounted on the wheel shafts
         (kWheelDiameterMeters * Math.PI) / (double) kEncoderCPR;
+
+    public static final double GEAR_RATIO = 8.45;
+    public static final double WHEEL_DIAMETER_METERS = 0.15;
+    public static final double ENCODER_DISTANCE_PER_REV =
+        // Assumes the encoders are directly mounted on the wheel shafts
+        (WHEEL_DIAMETER_METERS * Math.PI) / GEAR_RATIO;
+    public static final double ENCODER_VELOCITY_CONVERSION =
+        (WHEEL_DIAMETER_METERS * Math.PI) / (GEAR_RATIO * 60);
 
     // These are example values only - DO NOT USE THESE FOR YOUR OWN ROBOT!
     // These characterization values MUST be determined either experimentally or theoretically
